@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобили из Кореи и Китая - ASIA ALLIANCE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'main/favicon/favicon-96x96.png' %}" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="{% static 'main/favicon/favicon.svg' %}">
+    <link rel="shortcut icon" href="{% static 'main/favicon/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/favicon/apple-touch-icon.png' %}">
+    <link rel="manifest" href="{% static 'main/favicon/site.webmanifest' %}">
+    <link rel="stylesheet" href="{% static 'main/css/splide-core.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/toastr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    {% csrf_token %}
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <div class="logo fade-in-down">
+            <a href="/"><img src="{% static 'main/img/main-logo.svg' %}" alt="Автомобили из Кореи и Китая"></a>
+        </div>
+        <nav class="main-nav fade-in-down">
+            <a href="tel:+79151249545" class="phone-link">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27">
+                    <path d="m13.5,0C6.04,0,0,6.04,0,13.5s6.04,13.5,13.5,13.5,13.5-6.04,13.5-13.5S20.96,0,13.5,0Zm-4.85,5.36c.28-.02.53.15.72.44l1.85,3.5c.19.41.08.86-.21,1.16l-.85.85c-.05.07-.09.15-.09.24.32,1.25,1.31,2.41,2.18,3.21.87.8,1.8,1.87,3.01,2.13.15.04.33.06.44-.04l.98-1c.34-.26.83-.38,1.19-.17h.02l3.33,1.97c.49.31.54.9.19,1.26l-2.29,2.28c-.34.35-.79.46-1.23.46-1.93-.06-3.76-1.01-5.26-1.98-2.46-1.79-4.72-4.02-6.14-6.7-.54-1.13-1.18-2.56-1.12-3.82,0-.47.13-.94.47-1.24l2.29-2.29c.18-.15.36-.23.52-.24Z" fill="#db1e1e" stroke-width="0"></path>
+                </svg>
+                +7 (915) 124-95-45</a>
+            <a href="#car-price" class="btn btn-primary">Оставить заявку
+                <svg class="icon">
+                    <use href="#arrow-up-right"></use>
+                </svg>
+            </a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="hero section">
+        <div class="container">
+            <div class="text">
+                <h1 class="fade-in-up"><span>Автомобили</span><br>
+                    из Кореи и Китая</h1>
+                <p class="fade-in-up" style="max-width: 43rem">Купим автомобиль дешевле аналогов в РФ и доставим за 20-40 дней</p>
+                <div class="fade-in-up">
+                    <a href="#car-price" class="btn btn-primary">УЗНАТЬ СТОИМОСТЬ
+                        <svg class="icon">
+                            <use href="#arrow-up-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <img src="{% static 'main/img/main-banner-img.png' %}" alt="Автомобили</span><br>
+                    из Кореи и Китая" class="hero-img">
+        </div>
+        <div class="container">
+            <div class="grid-md-3 results">
+                <div class="card fsz-16 fade-in-up">
+                    <h2 class="h2"><strong class="counter">2500</strong> +</h2>
+                    Привезли авто
+                </div>
+                <div class="card fsz-16 fade-in-up">
+                    <h2 class="h2">до <strong class="counter">30</strong>%</h2>
+                    Экономия
+                </div>
+                <div class="card fsz-16 fade-in-up">
+                    <h2 class="h2"><strong class="counter">4</strong> Года</h2>
+                    В сфере поставок авто
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="grid-md-2">
+                <div class="col">
+                    <div class="text" style="max-width: 48rem">
+                        <h2 class="h2 fade-in-up" style="max-width: 90%">Привезти автомобиль –
+                            <span>на 30% дешевле,</span> чем купить аналог в РФ</h2>
+                        <p class="fade-in-up">Привезем за наш счет! Начните с 20%, остальное — после получения ключей.</p>
+                        <p class="fade-in-up">Кредит от 18,9%. Специальные условия от нашего партнера — банка ВТБ. Поможем оформить.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="accordion">
+                        <div class="accordion-item fade-in-right">
+                            <button class="accordion-header">
+                                <span class="accordion-number">1</span>
+                                <span class="accordion-title">Техническое состояние</span>
+                                <svg class="accordion-arrow">
+                                    <use href="#accordion-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordion-content fsz-16">
+                                <p>Автомобиль лучше, поскольку он не эксплуатировался на российских дорогах.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in-right">
+                            <button class="accordion-header">
+                                <span class="accordion-number">2</span>
+                                <span class="accordion-title">Экономия до 30%</span>
+                                <svg class="accordion-arrow">
+                                    <use href="#accordion-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordion-content fsz-16">
+                                <p>Заказывая автомобиль напрямую, вы экономите по сравнению с аналогичными моделями на российском рынке.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in-right">
+                            <button class="accordion-header">
+                                <span class="accordion-number">3</span>
+                                <span class="accordion-title">Полная страховка груза и наша ответственность</span>
+                                <svg class="accordion-arrow">
+                                    <use href="#accordion-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordion-content fsz-16">
+                                <p>Мы полностью страхуем автомобиль на всех этапах доставки. Наша компания несет полную финансовую ответственность за сохранность транспорта до момента передачи ключей вам.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in-right">
+                            <button class="accordion-header">
+                                <span class="accordion-number">4</span>
+                                <span class="accordion-title">Вы - первый владелец в РФ</span>
+                                <svg class="accordion-arrow">
+                                    <use href="#accordion-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordion-content fsz-16">
+                                <p>Вы будете первым владельцем автомобиля в документах, а это будет весомым плюсом при дальнейшей продаже.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in-right">
+                            <button class="accordion-header">
+                                <span class="accordion-number">5</span>
+                                <span class="accordion-title">Полная диагностика перед покупкой</span>
+                                <svg class="accordion-arrow">
+                                    <use href="#accordion-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="accordion-content fsz-16">
+                                <p>Перед покупкой мы проводим полную техническую диагностику автомобиля: проверяем двигатель, ходовую часть, электронику и кузов на отсутствие скрытых повреждений и дефектов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews section">
+        <div class="container">
+            <h2 class="text-center mb-6 fade-in-up"> Cчастливые владельцы <br>
+                <span>новых авто</span>
+            </h2>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-08.webm' %}" class="review-link" data-fancybox data-width="1080" data-height="1920">
+                                <img src="{% static 'main/reviews/poster-08.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-09.webm' %}" class="review-link" data-fancybox data-width="1080" data-height="1920">
+                                <img src="{% static 'main/reviews/poster-09.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-10.webm' %}" class="review-link" data-fancybox data-width="1080" data-height="1920">
+                                <img src="{% static 'main/reviews/poster-10.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-11.webm' %}" class="review-link" data-fancybox data-width="1072" data-height="1904">
+                                <img src="{% static 'main/reviews/poster-11.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-12.webm' %}" class="review-link" data-fancybox data-width="1072" data-height="1904">
+                                <img src="{% static 'main/reviews/poster-12.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-13.webm' %}" class="review-link" data-fancybox data-width="1080" data-height="1920">
+                                <img src="{% static 'main/reviews/poster-13.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-14.webm' %}" class="review-link" data-fancybox data-width="1080" data-height="1920">
+                                <img src="{% static 'main/reviews/poster-14.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-15.webm' %}" class="review-link" data-fancybox data-width="1080" data-height="1920">
+                                <img src="{% static 'main/reviews/poster-15.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-01.webm' %}" class="review-link" data-fancybox data-width="464" data-height="848">
+                                <img src="{% static 'main/reviews/poster-01.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-02.webm' %}" class="review-link" data-fancybox data-width="464" data-height="848">
+                                <img src="{% static 'main/reviews/poster-02.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-03.webm' %}" class="review-link" data-fancybox data-width="464" data-height="848">
+                                <img src="{% static 'main/reviews/poster-03.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-04.webm' %}" class="review-link" data-fancybox data-width="720" data-height="1280">
+                                <img src="{% static 'main/reviews/poster-04.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-05.webm' %}" class="review-link" data-fancybox data-width="464" data-height="848">
+                                <img src="{% static 'main/reviews/poster-05.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-06.webm' %}" class="review-link" data-fancybox data-width="478" data-height="850">
+                                <img src="{% static 'main/reviews/poster-06.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="{% static 'main/reviews/reviews-07.webm' %}" class="review-link" data-fancybox data-width="478" data-height="850">
+                                <img src="{% static 'main/reviews/poster-07.jpg' %}" alt="Video poster" width="760" height="520">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="car-price" class="car-price section">
+        <div class="container">
+            <div class="grid-md-2">
+                <div class="col">
+                    <div class="text" style="max-width: 43rem">
+                        <h2 class="h2 fade-in-up" style="max-width: 77%">Узнайте актуальную
+                            <span>стоимость на ваш автомобиль</span></h2>
+                        <p class="fade-in-up">Оставьте свои контактные данные. Мы у вас уточним марку автомобиля, страну покупки, пожелания по пробегу, технические характеристики, ориентировочный бюджет. Предложим вам несколько вариантов желаемого автомобиля.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-wrapper fade-in-left">
+                        <form class="request-form car-request-form" id="contact-form1" action="." novalidate>
+                            <h3>ЗАЯВКА</h3>
+                            <div class="form-group">
+                                <label>Имя <span class="required">*</span></label>
+                                {{form.name}}
+                            </div>
+                            <div class="form-group">
+                                <label>Телефон <span class="required">*</span></label>
+                                {{form.phone}}
+                            </div>
+                            <div class="form-group">
+                                <label>Почта <span class="required">*</span></label>
+                                {{form.email}}
+                            </div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="person_type" value="individual">
+                                        <span class="custom-radio"></span>
+                                        Физ. лицо
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="person_type" value="company">
+                                        <span class="custom-radio"></span>
+                                        Юр. лицо
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <select class="car-brand" name="car_brand">
+                                        <option value="" disabled selected>Выберите марку</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <select class="car-model" name="car_model" disabled>
+                                        <option value="" disabled selected>Модель</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="budget-label">Бюджет</label>
+                                <div class="budget-row">
+                                    <div class="budget-input">
+                                        {{form.budget_from}}
+                                    </div>
+                                    <div class="budget-input">
+                                        {{form.budget_to}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    {{form.confirm_privacy}}
+                                    <span class="custom-checkbox"></span>
+                                    Я согласен с
+                                    <a href="/privacy-policy" target="_blank">политикой обработки персональных данных</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="imported-cars section">
+        <div class="container">
+            <h2 class="text-center mb-6 fade-in-up">Более 2500 привезенных<br>
+                <span>автомобилей из Азии</span>
+            </h2>
+            <div class="grid-auto-2 mb-4">
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-01.jpg' %}" alt="BMW X3">
+                    <h3>BMW X3</h3>
+                    <p class="fsz-20">От 6 800 000 р.</p>
+                </div>
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-02.jpg' %}" alt="BMW X7">
+                    <h3>BMW 2 Series</h3>
+                    <p class="fsz-20">От 2 400 000 р.</p>
+                </div>
+            </div>
+            <div class="grid-auto-3">
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-03.jpg' %}" alt="AUDI Q3">
+                    <h3>AUDI Q3</h3>
+                    <p class="fsz-16">От 3 100 000 р.</p>
+                </div>
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-04.jpg' %}" alt="Mercedes GLB">
+                    <h3>Mercedes GLB</h3>
+                    <p class="fsz-16">От 2 700 0000 р.</p>
+                </div>
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-05.jpg' %}" alt="KIA K5">
+                    <h3>KIA K5</h3>
+                    <p class="fsz-16">От 2 250 000 р.</p>
+                </div>
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-06.jpg' %}" alt="BMW 5 Series">
+                    <h3>BMW 5 Series</h3>
+                    <p class="fsz-16">От 5 500 000 р.</p>
+                </div>
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-07.jpg' %}" alt="MERCEDES GLE450">
+                    <h3>MERCEDES GLE450</h3>
+                    <p class="fsz-16">От 8 800 000 р.</p>
+                </div>
+                <div class="auto-card fade-in-right">
+                    <img src="{% static 'main/img/auto-08.jpg' %}" alt="MERCEDES E-klasse ">
+                    <h3>MERCEDES E-klasse</h3>
+                    <p class="fsz-16">От 5 000 000 р.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="simple-steps section">
+        <div class="container">
+            <h2 class="h2 mb-6 fade-in-up">7 простых шагов <br><span>и втомобиль у вас</span></h2>
+            <div class="steps-grid">
+                <!-- Шаг 1 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>1</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Выяснение деталей</strong><br>
+                        по желаемому<br>
+                        автомобилю
+                    </div>
+                </div>
+                <!-- Шаг 2 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>2</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Заключение договора</strong><br>
+                        с нашей компанией<br>
+                        «ИТ Альянс» <a href="#">подробнее</a>
+                    </div>
+                </div>
+                <!-- Шаг 3 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>3</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Подбор автомобиля</strong><br>
+                        экспертом с полным<br>
+                        описанием, подробным фотоотчетом
+                    </div>
+                </div>
+                <!-- Шаг 4 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>4</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Покупка автомобиля</strong><br>
+                        с фото и видео<br>
+                        осмотром
+                    </div>
+                </div>
+            </div>
+            <div class="steps-grid">
+                <!-- Шаг 5 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>5</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Доставка во Владивосток</strong><br>
+                        с фотоописью
+                    </div>
+                </div>
+                <!-- Шаг 6 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>6</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Таможенное оформление</strong><br>
+                        и получение документов
+                    </div>
+                </div>
+                <!-- Шаг 7 -->
+                <div class="step-item fade-in-right">
+                    <div class="step-number">
+                        <span>7</span>
+                    </div>
+                    <div class="step-content">
+                        <strong>Выдача авто или доставка</strong><br>
+                        в любой город РФ
+                    </div>
+                </div>
+                <!-- Шаг 8 (Готово) -->
+                <div class="step-item step-complete fade-in-right">
+                    <div class="step-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C25.4547 45 28.3806 44.418 31.1104 43.2873C33.8402 42.1566 36.3206 40.4992 38.4099 38.4099C40.4992 36.3206 42.1566 33.8402 43.2873 31.1104C44.418 28.3806 45 25.4547 45 22.5C45 19.5453 44.418 16.6194 43.2873 13.8896C42.1566 11.1598 40.4992 8.67941 38.4099 6.5901C36.3206 4.50078 33.8402 2.84344 31.1104 1.71271C28.3806 0.581979 25.4547 -4.40291e-08 22.5 0C16.5326 8.89208e-08 10.8097 2.37053 6.5901 6.5901C2.37053 10.8097 0 16.5326 0 22.5C0 28.4674 2.37053 34.1903 6.5901 38.4099C10.8097 42.6295 16.5326 45 22.5 45ZM21.92 31.6L34.42 16.6L30.58 13.4L19.83 26.2975L14.2675 20.7325L10.7325 24.2675L18.2325 31.7675L20.1675 33.7025L21.92 31.6Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <strong>Готово, желаемый</strong><br>
+                        автомобиль ваш
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero-two section">
+        <div class="container">
+            <div class="grid-md-2">
+                <div class="col">
+                    <div class="text" style="max-width: 57rem">
+                        <h2 class="fade-in-up"><span>Узнайте актуальную стоимость</span> на ваш автомобиль</h2>
+                        <p class="fade-in-up">Оставьте свои контактные данные. Мы у вас уточним марку автомобиля, страну покупки, пожелания по пробегу, технические характеристики, ориентировочный бюджет. Предложим вам несколько вариантов желаемого автомобиля.</p>
+                        <a href="#car-price" class="btn btn-primary fade-in-up">УЗНАТЬ СТОИМОСТЬ
+                            <svg class="icon">
+                                <use href="#arrow-up-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="{% static 'main/img/hero-two.jpg' %}" alt="Автомобили</span><br>
+                    из Кореи и Китая" class="hero-two-img fade-in-right">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="protection section">
+        <div class="container">
+            <div class="text mb-6" style="max-width: 70rem">
+                <h2 class="h2 fade-in-up" style="max-width: 77%">Защита <span>на каждом
+                    этапе сделки </span></h2>
+                <p class="fade-in-up">Мы знаем, как важно чувствовать уверенность при оплате. Поэтому все платежи происходят поэтапно и напрямую компании оказывающей услуги. Мы присылаем вам инвойсы и счета для оплаты, а вы их оплачиваете</p>
+            </div>
+            <div class="protection-grid">
+                <div class="card card-icon fade-in-right">
+                    <div class="content-col">
+                        <h3>Агентское сопровождение</h3>
+                        <p>Наша компания «ИТ Альянс» - <a href="#">подробнее</a></p>
+                    </div>
+                    <div class="icon-col">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="4.2rem" height="3.1rem" viewBox="0 0 42 31" fill="none">
+                                <path d="M12.9714 14.4786C15.101 14.4786 17.1434 13.7159 18.6493 12.3583C20.1552 11.0006 21.0012 9.15928 21.0012 7.2393C21.0012 5.31932 20.1552 3.47797 18.6493 2.12034C17.1434 0.76271 15.101 0 12.9714 0C10.8417 0 8.79926 0.76271 7.29337 2.12034C5.78747 3.47797 4.94147 5.31932 4.94147 7.2393C4.94147 9.15928 5.78747 11.0006 7.29337 12.3583C8.79926 13.7159 10.8417 14.4786 12.9714 14.4786ZM27.0224 25.939C28.3319 26.4223 29.9972 26.7297 32.1171 26.7297C42 26.7297 42 20.0473 42 20.0473C42 19.1615 41.6099 18.312 40.9154 17.6855C40.2209 17.059 39.2789 16.7067 38.2964 16.7061H26.8618C27.8328 17.7664 28.4159 19.1229 28.4159 20.6042V21.3971C28.4107 21.5847 28.3966 21.772 28.3739 21.9585C28.2057 23.3499 27.7455 24.7003 27.0224 25.939ZM38.2964 8.90991C38.2964 10.3868 37.6456 11.8032 36.4872 12.8476C35.3288 13.8919 33.7577 14.4786 32.1195 14.4786C30.4813 14.4786 28.9102 13.8919 27.7519 12.8476C26.5935 11.8032 25.9427 10.3868 25.9427 8.90991C25.9427 7.433 26.5935 6.01658 27.7519 4.97225C28.9102 3.92792 30.4813 3.34122 32.1195 3.34122C33.7577 3.34122 35.3288 3.92792 36.4872 4.97225C37.6456 6.01658 38.2964 7.433 38.2964 8.90991ZM0 21.161C0 19.9795 0.520617 18.8464 1.44732 18.0109C2.37403 17.1754 3.63091 16.7061 4.94147 16.7061H21.0012C22.3118 16.7061 23.5687 17.1754 24.4954 18.0109C25.4221 18.8464 25.9427 19.9795 25.9427 21.161C25.9427 21.161 25.9427 30.0709 12.9714 30.0709C0 30.0709 0 21.161 0 21.161Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-icon fade-in-right">
+                    <div class="content-col">
+                        <h3>Покупка автомобиля</h3>
+                        <p>Экспортная компания в стране покупки</p>
+                        <p>Привезем за наш счет! Начните с 20%, остальное — после получения ключей.</p>
+                    </div>
+                    <div class="icon-col">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.3rem" viewBox="0 0 32 33" fill="none">
+                                <path d="M19.9467 20.8052C27.04 20.8052 32 16.5099 32 10.3355C32 4.16103 27.04 0 19.9467 0H6.33333C5.78108 0 5.33333 0.388146 5.33333 0.866882V15.794H1C0.44775 15.794 0 16.1821 0 16.6609V19.9383C0 20.417 0.44775 20.8052 1 20.8052H5.33333V23.1168H1C0.44775 23.1168 0 23.505 0 23.9837V26.8733C0 27.3521 0.44775 27.7402 1 27.7402H5.33333V31.4967C5.33333 31.9754 5.78108 32.3636 6.33333 32.3636H11.2133C11.7656 32.3636 12.2133 31.9754 12.2133 31.4967V27.7402H25.6667C26.2189 27.7402 26.6667 27.3521 26.6667 26.8733V23.9837C26.6667 23.505 26.2189 23.1168 25.6667 23.1168H12.2133V20.8052H19.9467ZM12.2133 4.96636H18.7733C22.6667 4.96636 25.0133 7.06927 25.0133 10.3355C25.0133 13.6464 22.6667 15.794 18.6667 15.794H12.2133V4.96636Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-icon fade-in-right">
+                    <div class="content-col">
+                        <h3>Доставка <br> в Россию</h3>
+                        <p>Международная
+                            транспортная
+                            компания</p>
+                    </div>
+                    <div class="icon-col">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="4.5rem" height="2.9rem" viewBox="0 0 45 29" fill="none">
+                                <path d="M42.825 4.89441L22.9125 0.0494434C22.7097 -5.36303e-05 22.497 -0.0125688 22.2881 0.012715L2.57625 2.41124C1.86254 2.50065 1.21012 2.80503 0.737424 3.26914C0.264728 3.73326 0.00308876 4.32634 0 4.94072V23.1644C0.00308876 23.7788 0.264728 24.3719 0.737424 24.836C1.21012 25.3001 1.86254 25.6045 2.57625 25.6939L22.2881 28.0892C22.3583 28.0986 22.429 28.1039 22.5 28.1052C22.6395 28.1051 22.7784 28.0885 22.9125 28.0557L42.825 23.2107C43.4495 23.0567 43.9988 22.7348 44.3908 22.293C44.7828 21.8512 44.9965 21.3133 45 20.7595V7.34564C44.9965 6.79189 44.7828 6.25396 44.3908 5.81217C43.9988 5.37038 43.4495 5.04843 42.825 4.89441ZM10.5 12.7751H7.5C7.10218 12.7751 6.72064 12.9097 6.43934 13.1492C6.15804 13.3888 6 13.7138 6 14.0526C6 14.3914 6.15804 14.7163 6.43934 14.9559C6.72064 15.1955 7.10218 15.3301 7.5 15.3301H10.5V24.0779L3 23.1644V4.94072L10.5 4.0273V12.7751ZM21 25.3554L13.5 24.4419V15.3301H16.5C16.8978 15.3301 17.2794 15.1955 17.5607 14.9559C17.842 14.7163 18 14.3914 18 14.0526C18 13.7138 17.842 13.3888 17.5607 13.1492C17.2794 12.9097 16.8978 12.7751 16.5 12.7751H13.5V3.66321L21 2.74979V25.3554Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-icon fade-in-right">
+                    <div class="content-col">
+                        <h3>Оплата ввозных <br>
+                            пошлин</h3>
+                        <p>Федеральная
+                            таможенная
+                            служба РФ</p>
+                    </div>
+                    <div class="icon-col">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.5rem" viewBox="0 0 34 35" fill="none">
+                                <path d="M13.9093 0L15.4547 2.62053H30.9091L32.4546 0H13.9093ZM15.4547 3.9308V7.20647C15.4547 7.20647 15.4547 14.4129 23.1819 14.4129C30.9091 14.4129 30.9091 7.20647 30.9091 7.20647V3.9308H15.4547ZM3.04174 7.82491C2.22304 7.83595 1.44296 8.12195 0.872732 8.62014C0.302509 9.11833 -0.0112579 9.788 0.000308817 10.4821V20.9643C-7.48361e-05 21.3569 0.103601 21.7445 0.303676 22.0986C0.503751 22.4527 0.795112 22.7642 1.15623 23.0099C1.51734 23.2557 1.93899 23.4296 2.39 23.5186C2.84101 23.6077 3.30986 23.6097 3.76191 23.5245L12.3638 21.8998V34.0669L30.5351 15.9066C30.0961 15.7925 29.6404 15.7308 29.1813 15.7232H17.0002L6.18207 17.6991V10.4821C6.18792 10.1314 6.11064 9.78318 5.95481 9.4582C5.79899 9.13323 5.56779 8.83809 5.27493 8.59028C4.98206 8.34247 4.6335 8.14704 4.24989 8.01557C3.86628 7.8841 3.45545 7.81926 3.04174 7.82491ZM33.2211 17.5864L16.7282 34.0669H34V19.8086C34 18.9858 33.7095 18.2258 33.2211 17.5864Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-icon fade-in-right">
+                    <div class="content-col">
+                        <h3>Доставка <br>
+                            по России</h3>
+                        <p>Российская
+                            транспортная
+                            компания</p>
+                    </div>
+                    <div class="icon-col">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="33" viewBox="0 0 31 33" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6358 32.1279L14.7673 32.1918L14.8199 32.2174C15.0285 32.3133 15.2619 32.3636 15.4991 32.3636C15.7362 32.3636 15.9696 32.3133 16.1782 32.2174L16.2308 32.1934L16.3642 32.1279C16.4782 32.0714 16.6379 31.9899 16.8433 31.8833C17.251 31.6707 17.8278 31.3559 18.5155 30.9419C20.3203 29.8572 22.0068 28.6365 23.5544 27.2945C27.2067 24.1139 31 19.3349 31 13.1861C31 9.68897 29.367 6.33502 26.4602 3.86213C23.5533 1.38925 19.6109 0 15.5 0C11.3891 0 7.44666 1.38925 4.53984 3.86213C1.63303 6.33502 0 9.68897 0 13.1861C0 19.3333 3.79515 24.1139 7.44564 27.2945C8.99323 28.6365 10.6797 29.8572 12.4845 30.9419C13.1827 31.3615 13.9003 31.7572 14.6358 32.1279ZM15.5 17.9811C16.9949 17.9811 18.4285 17.4759 19.4855 16.5767C20.5425 15.6775 21.1364 14.4579 21.1364 13.1861C21.1364 11.9144 20.5425 10.6948 19.4855 9.7956C18.4285 8.89637 16.9949 8.39119 15.5 8.39119C14.0051 8.39119 12.5715 8.89637 11.5145 9.7956C10.4575 10.6948 9.86364 11.9144 9.86364 13.1861C9.86364 14.4579 10.4575 15.6775 11.5145 16.5767C12.5715 17.4759 14.0051 17.9811 15.5 17.9811Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="official-exporter section">
+        <div class="container">
+            <div class="text mb-6" style="max-width: 78rem">
+                <h2 class="h2 fade-in-up">Являемся прямым <br> официальным
+                    <span>экспортером, в каждой стране покупки</span></h2>
+            </div>
+            <div style="margin-top: 18rem;">
+                <p class="mb-2 fade-in-up">Для вас это означает:</p>
+                <div class="grid-md-3">
+                    <div class="card card-num fade-in-right">
+                        <div class="col-num">1</div>
+                        <div class="col-content">
+                            Отсутствие
+                            посредников
+                        </div>
+                    </div>
+                    <div class="card card-num fade-in-right">
+                        <div class="col-num">2</div>
+                        <div class="col-content">
+                            Отсутствие
+                            доп комиссий
+                        </div>
+                    </div>
+                    <div class="card card-num fade-in-right">
+                        <div class="col-num">3</div>
+                        <div class="col-content">
+                            Наша ответственность
+                            за экспорт вашего авто
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="car-price section">
+        <div class="container">
+            <div class="grid-md-2">
+                <div class="col">
+                    <div class="text" style="max-width: 43rem">
+                        <h2 class="h2 fade-in-up">Оставь заявку сейчас и <span>получи подарок на выбор!</span></h2>
+                        <p class="fade-in-up">Оставьте свои контактные данные. Мы у вас уточним марку автомобиля, страну покупки, пожелания по пробегу, технические характеристики, ориентировочный бюджет. Предложим вам несколько вариантов желаемого автомобиля.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-wrapper fade-in-left">
+                        <form class="request-form car-request-form" id="contact-form2" action="." novalidate>
+                            <h3>ЗАЯВКА</h3>
+                            <div class="form-group">
+                                <label>Имя <span class="required">*</span></label>
+                                {{form.name}}
+                            </div>
+                            <div class="form-group">
+                                <label>Телефон <span class="required">*</span></label>
+                                {{form.phone}}
+                            </div>
+                            <div class="form-group">
+                                <label>Почта <span class="required">*</span></label>
+                                {{form.email}}
+                            </div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="person_type" value="individual">
+                                        <span class="custom-radio"></span>
+                                        Физ. лицо
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="person_type" value="company">
+                                        <span class="custom-radio"></span>
+                                        Юр. лицо
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <select class="car-brand" name="car_brand">
+                                        <option value="" disabled selected>Выберите марку</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <select class="car-model" name="car_model" disabled>
+                                        <option value="" disabled selected>Модель</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="budget-label">Бюджет</label>
+                                <div class="budget-row">
+                                    <div class="budget-input">
+                                        {{form.budget_from}}
+                                    </div>
+                                    <div class="budget-input">
+                                        {{form.budget_to}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    {{form.confirm_privacy}}
+                                    <span class="custom-checkbox"></span>
+                                    Я согласен с
+                                    <a href="/privacy-policy" target="_blank">политикой обработки персональных данных</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service section">
+        <div class="container">
+            <div class="text mb-4" style="max-width: 60rem">
+                <h2 class="h2 fade-in-up"><span>Сервис,</span> за который нас ценят</h2>
+            </div>
+            <div class="grid-md-2">
+                <div class="card fade-in-right">
+                    <h3><span>Бесплатные</span><br> услуги</h3>
+                    <ul>
+                        <li><span>—</span> Доставка до транспортной компании при отправке по РФ</li>
+                        <li><span>—</span> Покупка дополнительных комплектующих (диски, шины, запчасти и т.д.)</li>
+                    </ul>
+                </div>
+                <div class="card fade-in-right">
+                    <h3><span>Дополнительные</span><br> услуги</h3>
+                    <ul>
+                        <li><span>—</span> Детейлинг</li>
+                        <li><span>—</span> Оклейка автомобиля</li>
+                        <li><span>—</span> Русификация</li>
+                        <li><span>—</span> Иные работы с прошивкой</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts section">
+        <div class="container">
+            <h2 class="text-center mb-6 fade-in-up"> Доставляем автомобили <br>
+                <span>по всей территории РФ</span>
+            </h2>
+            <div class="grid-md-3">
+                <div class="office fade-in-right">
+                    <p>Главный офис</p>
+                    <h3>МОСКВА</h3>
+                    <p class="fsz-16">Ленинский проспект, 15А, БЦ Central Park Tower</p>
+                    <p class="fsz-16"><a href="tel:+79151249545">+7 (915) 124-95-45</a></p>
+                </div>
+                <div class="office fade-in-right">
+                    <p>Детейлинг</p>
+                    <h3>Москва</h3>
+                    <p class="fsz-16">ул. Архитектора Щусева 5к2</p>
+                </div>
+                <div class="office fade-in-right">
+                    <p>Филиал</p>
+                    <h3>Сеул (Корея)</h3>
+                    <p class="fsz-16">D 17, 26th floor, 165, Convensia-daero, Yeonsu-gu, Incheon (Songdo-dong, Posco Tower-Songdo)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1e1ec5eb71c517d02eba6e7165a0461d041118135bd7d6e7588bcd5539fb0195&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Колонка 1 -->
+            <div class="footer-column">
+                <h3 class="footer-title">ГЛАВНАЯ</h3>
+                <ul class="footer-menu">
+                    <li><a href="#">Качество</a></li>
+                    <li><a href="#">Лизинг</a></li>
+                    <li><a href="#">Индивидуальный подход</a></li>
+                </ul>
+            </div>
+            <!-- Колонка 2 -->
+            <div class="footer-column">
+                <h3 class="footer-title">КАТАЛОГ</h3>
+                <ul class="footer-menu">
+                    <li><a href="#">Выбрать авто</a></li>
+                    <li><a href="#">Узнать про авто</a></li>
+                </ul>
+            </div>
+            <!-- Колонка 3 -->
+            <div class="footer-column">
+                <h3 class="footer-title">О НАС</h3>
+                <ul class="footer-menu">
+                    <li><a href="#">Достижения</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Закулисье</a></li>
+                </ul>
+            </div>
+            <!-- Колонка 4 -->
+            <div class="footer-column">
+                <h3 class="footer-title">КОНТАКТЫ</h3>
+                <ul class="footer-menu">
+                    <li><a href="#">Оставить заявку</a></li>
+                </ul>
+            </div>
+            <!-- Колонка 5 -->
+            <div class="footer-column">
+                <h3 class="footer-title">КЛИЕНТСКИЙ ПУТЬ</h3>
+                <ul class="footer-menu">
+                    <!-- Можно добавить ссылки позже -->
+                    <li><a href="#">Этапы работы</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<svg width="0" height="0" class="hidden">
+    <symbol id="arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+        <path d="m8.13,0H1.38c-.35,0-.63.28-.63.62s.28.62.63.62h6.49L.18,8.93c-.24.24-.24.64,0,.88.12.12.28.18.44.18s.32-.06.44-.18l7.68-7.68v6.49c0,.35.28.62.62.62s.62-.28.62-.62V1.88c0-1.03-.84-1.88-1.87-1.88Z" fill="#fff" stroke-width="0"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10" id="accordion-arrow">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 9.11241L16 1.41451L14.5324 0L8 6.28738L1.46964 0L0 1.41451L8 9.11241Z" fill="white" fill-opacity="0.2"></path>
+    </symbol>
+</svg>
+<script src="{% static 'main/js/splide.min.js' %}"></script>
+<script src="{% static 'main/js/fancybox.umd.js' %}"></script>
+<script src="{% static 'main/js/main.js' %}"></script>
+<script src="{% static 'main/js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'main/js/toastr.min.js' %}"></script>
+<script src="{% static 'main/js/jquery.inputmask.min.js' %}"></script>
+<script>
+  Inputmask({
+    mask: '+7 (999) 999-99-99',
+    showMaskOnHover: false,
+    clearIncomplete: true
+  }).mask('#contact-form1 #phone');
+  Inputmask({
+    mask: '+7 (999) 999-99-99',
+    showMaskOnHover: false,
+    clearIncomplete: true
+  }).mask('#contact-form2 #phone');
+</script>
+<script src="{% static 'main/js/contact-form.js' %}"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105132237', 'ym');
+
+    ym(105132237, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105132237" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8" defer></script>
+</body>
+</html>

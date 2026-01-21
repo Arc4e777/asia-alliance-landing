@@ -1,0 +1,34 @@
+.site-header {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem 0;
+  .main-nav,
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .container {
+    max-width: 160rem;
+  }
+}
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  svg {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+}
+@media(max-width: 599px) {
+  .site-header {
+    .main-nav,
+    .container {
+      flex-direction: column;
+    }
+  }
+}

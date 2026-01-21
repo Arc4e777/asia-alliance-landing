@@ -1,0 +1,25 @@
+.btn {
+  align-items: center;
+  display: inline-flex;
+  gap: 1rem;
+  justify-content: center;
+  border-radius: .5rem;
+  padding: 1.3rem 2.4rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: clamp-lg(12, 14);
+  text-transform: uppercase;
+  line-height: 1;
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.btn-primary {
+  background-color: #DB1E1E;
+  color: #fff;
+  &:hover {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}

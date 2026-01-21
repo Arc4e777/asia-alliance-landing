@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Mazzard H';
+  src: url('../fonts/MazzardH-Regular.woff2') format('woff2'),
+  url('../fonts/MazzardH-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mazzard H';
+  src: url('../fonts/MazzardH-SemiBold.woff2') format('woff2'),
+  url('../fonts/MazzardH-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mazzard H';
+  src: url('../fonts/MazzardH-Medium.woff2') format('woff2'),
+  url('../fonts/MazzardH-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mazzard H';
+  src: url('../fonts/MazzardH-Bold.woff2') format('woff2'),
+  url('../fonts/MazzardH-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  min-width: 375px;
+  font-size: clamp-lg(7, 10);
+}
+body {
+  font-family: 'Mazzard H', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+a {
+  transition: all .5s ease;
+  color: $color-primary;
+  &:hover {
+    opacity: .7;
+  }
+}
+.fsz-16 {
+  font-size: clamp-lg(14, 16);
+}
+h1, .h1, h2, .h2 {
+  font-size: clamp-lg(26, 44);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.18;
+  span {
+    color: $color-primary;
+  }
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}

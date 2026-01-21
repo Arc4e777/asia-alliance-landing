@@ -1,0 +1,24 @@
+:root {
+  --grid-gap: 2.7rem;
+  --grid-gap-lg: 4rem;
+}
+[class^="grid-"] {
+  display: grid;
+  gap: var(--grid-gap);
+}
+@media (min-width: 768px) {
+  .grid-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-auto-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap-lg);
+  }
+  .grid-auto-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap-lg);
+  }
+}

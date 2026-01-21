@@ -1,0 +1,66 @@
+@media (min-width: 768px) {
+  .hero-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-23%);
+    z-index: -1;
+  }
+  .results {
+    margin-top: 21rem;
+  }
+  .protection-grid {
+    grid-template-columns: repeat(6, 1fr); // 6 колонок для гибкости
+    .card-icon {
+      grid-column: span 2;
+    }
+    .card-icon:nth-child(1),
+    .card-icon:nth-child(2) {
+      grid-column: span 3;
+    }
+  }
+  .hero-two {
+    overflow-x: clip;
+    .col {
+      position: relative;
+    }
+    .hero-two-img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: 144rem;
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .imported-cars {
+    .container {
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    text-align: center;
+  }
+  .text {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-two-img {
+    margin-top: 4rem;
+  }
+  .steps-grid {
+    + .steps-grid {
+      margin-top: 5rem;
+    }
+    .step-item:nth-child(odd) {
+      transition-delay: 0s !important;
+    }
+    .step-item:nth-child(even) {
+      transition-delay: 0.5s !important;
+    }
+  }
+}

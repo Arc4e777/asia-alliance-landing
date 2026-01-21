@@ -1,0 +1,36 @@
+.site-footer {
+  padding: 4.3rem 0;
+  .container {
+    max-width: 160rem;
+  }
+  .footer-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+  }
+  .footer-menu a {
+    font-size: 14px;
+    opacity: .8;
+    color: #fff;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+.footer-grid {
+  display: grid;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  .footer-column {
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    grid-auto-columns: max-content;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+}
