@@ -30,7 +30,7 @@ class ContactForm(forms.Form):
                 'id': 'email'
             }
         ),
-        required=True
+        required=False
     )
     person_type = forms.ChoiceField(choices=(('individual', 'individual'), ('company', 'company')), required=True)
 

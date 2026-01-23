@@ -23,6 +23,7 @@ $('#contact-form1').submit(function (form) {
     success: function(data, status, xhr) {
       $('#contact-form1')[0].reset();
       toastr.success('Заявка успешно отправлена!');
+      ym(106372725,'reachGoal','form_submitted');
     },
 
     error: function(xhr, exception) {
@@ -59,6 +60,7 @@ $('#contact-form2').submit(function (form) {
     success: function(data, status, xhr) {
       $('#contact-form2')[0].reset();
       toastr.success('Заявка успешно отправлена!');
+      ym(106372725,'reachGoal','form_submitted');
     },
 
     error: function(xhr, exception) {

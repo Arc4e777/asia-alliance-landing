@@ -23,7 +23,7 @@ def send_contact_request(request_id):
 
     Имя: <b>{contact_request.name}</b><br>
     Телефон: <b>{contact_request.phone}</b><br>
-    Почта: <b>{contact_request.email}</b><br>
+    Почта: <b>{contact_request.email or "-"}</b><br>
     Тип клиента: <b>{contact_request.get_person_type_display()}</b><br>
     Машина: <b>{contact_request.car or "-"}</b><br>
     Бюджет: От <b>{contact_request.budget_from or "-"}</b> до <b>{contact_request.budget_to or "-"}</b>
