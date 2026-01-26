@@ -149,6 +149,7 @@ const carData = {
         {id: 'mercedes', name: 'Mercedes-Benz'},
         {id: 'audi', name: 'Audi'},
         {id: 'lexus', name: 'Lexus'},
+        {id: 'other', name: 'Другая'}
     ],
     models: {
         hyundai: ['Solaris', 'Creta', 'Tucson', 'Santa Fe', 'Elantra', 'Sonata', 'Palisade'],
@@ -161,6 +162,7 @@ const carData = {
         mercedes: ['C-Class', 'E-Class', 'S-Class', 'GLE', 'GLC', 'GLA'],
         audi: ['A4', 'A6', 'A8', 'Q5', 'Q7', 'Q3'],
         lexus: ['RX', 'NX', 'LX', 'ES', 'IS', 'UX'],
+        other: ['Другая']
     },
 };
 
