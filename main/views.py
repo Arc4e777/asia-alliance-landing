@@ -4,7 +4,7 @@ from django.views.generic.edit import FormView
 
 from .forms import ContactForm
 from .models import ContactRequest
-from .tasks import send_contact_request
+from .tasks import send_contact_request, send_contact_request_to_telegram
 
 # Create your views here.
 
@@ -37,6 +37,7 @@ class ContactView(FormView):
             budget_to=cd.get('budget_to')
         )
         send_contact_request.delay(contact_request.pk)
+        send_contact_request_to_telegram.delay(contact_request.pk)
 
         return JsonResponse({'success': True})
 

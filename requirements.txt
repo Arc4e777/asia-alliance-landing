@@ -9,3 +9,4 @@ django-redis==6.0.0
 ratelimit==2.2.1
 python-dotenv==1.0.1
 pre-commit==4.5.1
+pyTelegramBotAPI==4.30.0

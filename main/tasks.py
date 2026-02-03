@@ -1,4 +1,8 @@
+import os
+
 from celery import shared_task
+
+import telebot
 
 from django.conf import settings
 from django.core.mail import send_mail
@@ -39,3 +43,28 @@ def send_contact_request(request_id):
         auth_password=settings.EMAIL_HOST_PASSWORD,
         html_message=html_message
     )
+
+
+@shared_task(
+    autoretry_for=(Exception,),
+    retry_kwargs={
+        'max_retries': 6,
+        'countdown': 10
+    }
+)
+def send_contact_request_to_telegram(request_id):
+    contact_request = ContactRequest.objects.get(id=request_id)
+
+    bot = telebot.TeleBot(os.environ['TELEGRAM_BOT_TOKEN'], parse_mode='HTML')
+    message = f'''
+    <u>Заявка #{request_id}</u>
+
+    Имя: <b>{contact_request.name}</b>\n
+    Телефон: <b>{contact_request.phone}</b>\n
+    Почта: <b>{contact_request.email or "-"}</b>\n
+    Тип клиента: <b>{contact_request.get_person_type_display()}</b>\n
+    Машина: <b>{contact_request.car or "-"}</b>\n
+    Бюджет: От <b>{contact_request.budget_from or "-"}</b> до <b>{contact_request.budget_to or "-"}</b>
+    '''
+
+    bot.send_message(os.environ['TELEGRAM_CHAT_ID'], message)
